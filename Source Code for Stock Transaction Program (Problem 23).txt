@@ -1,0 +1,57 @@
+//Author: Will Irvin
+//Student ID: 00061459
+//CS318: Mondays 2:30 - 5:20
+//Homework Week 1: Stock Transaction Program (programming Challenges #23)
+//
+//This program will display the following categories for stock transactions...
+// * The amount of money Joe paid for the stock.
+// * The amount of commission Joe paid his broker when he bought the stock.
+// * The amount that Joe sold the stock for.
+// * The amount of commission Joe paid his broker when he sold the stock.
+// * Display the amount of profit that Joe made after selling his stock and paying
+//   the two commissions to his broker. (If the amount of profit that your program
+//   displays is a negative number, then Joe lost money on the transaction.)
+
+#include <iostream>
+#include <iomanip>
+#include <iomanip>
+using namespace std;
+
+int main()
+{
+	int sharesBought = 1000,
+	    stockSold = 1000;
+
+	const double brokerComm = 0.02;
+
+	double	priceShareBought = 45.50,
+		priceShareSold = 56.90,
+		paidStock,
+		soldStock,
+		paidStockComm,
+		soldStockComm,
+		totSoldStock,
+		totProfit;
+
+	//Calculations
+	paidStock = (sharesBought * priceShareBought);
+	paidStockComm = (priceShareBought * sharesBought) * brokerComm;
+	soldStock = (priceShareSold * stockSold);
+	soldStockComm = (priceShareSold * stockSold) * brokerComm;
+	totProfit = soldStock - (paidStockComm + soldStockComm);
+	
+	//Report information
+	cout << "\n*****************************************************************\n"
+	     << "                    Stock Transaction Program\n"
+	     << "\n*****************************************************************\n";
+	cout << setprecision(2) << fixed;
+	cout << "Amount Paid for Stock(s):\t\t\t\t$" << setw(8) << paidStock << endl;
+	cout << "Commission Paid to Broker for purchased Shares:\t\t" << setw(9) << paidStockComm << endl;
+	cout << "Amount Stock(s) Sold for:\t\t\t\t" << setw(9) << soldStock << endl;
+	cout << "Commission Paid to Broker for Sold Shares:\t\t" << setw(9) << soldStockComm << endl;
+	cout << "\n\t\t\t\t\t\t\t---------\n";
+	cout << "Amount of Profit:\t\t\t\t\t$" << setw(8) << totProfit << endl;
+
+	system("pause");
+	return 0;
+}

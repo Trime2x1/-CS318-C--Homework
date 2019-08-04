@@ -1,0 +1,47 @@
+//Author: Will Irvin
+//Student ID: 00061459
+//CS318: Mondays 2:30 - 5:20
+//Homework Week 1: How Many Pizzas (Programming Challenges #21)
+//
+//This program will determine the number pizzas needed for 
+//the following number of people...
+//10 people 10" pizza
+//15 people 12" pizza
+//20 people 18" pizza
+
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main()
+{
+	int	numOfPeople,
+		totPizzas,
+		avgSlicesEaten = 4;
+	double	diameter,
+		radius,
+		slices,
+		area;
+	const double	Pi = 3.14159;
+
+	cout << "\nNumber of people who be attending the party? ";
+	cin >> numOfPeople;
+
+	cout << "Enter the diameter of the pizza to be ordered (in inches): ";
+	cin >> diameter;
+
+	//Calculations.
+	radius = diameter / 2;
+	area = Pi * pow(radius, 2.0);
+	slices = area / 14.125;
+	totPizzas = (numOfPeople * avgSlicesEaten) / slices;
+
+	cout << setprecision(1) << fixed;
+	cout << "\nThe total number of pizzas you will need to order? " 
+	     << totPizzas << " Pizzas!\n";
+
+	system("pause");
+	return 0;
+
+}

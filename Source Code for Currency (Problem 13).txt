@@ -1,0 +1,47 @@
+//Author: Will Irvin
+//Student ID: 00061459
+//CS318: Mondays 2:30 - 5:20 
+//Homework Week 1: Currency (Programming Challenges #13)
+//
+//This program is to convert $100.00 US dollars(USD) to current rate of exchange 
+//for the following currencies Zambia, Belize, and Hong Kong.
+//
+//The rate of exchange I used as a reference was found at the following website,
+//http://www.xe.com/currencyconverter/convert/?Amount=1&From=USD&To=BZD
+//The following rate of exchange for each country is shown below...
+//1.00 USD (US Dollar) = 1.99169 BZD (Belizean Dollar)
+//1.00 USD (US Dollar) = 7.75491 HKD (Hong Kong Dollar)
+//1.00 USD (US Dollar) = 10.0546 ZMW (Zambian Kwacha)
+
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main()
+{
+	//Current rate of exchange as of 08/25/2016.
+	const double belizeanDollar = 1.99169;		
+	const double hongkongDollar = 7.75491;		
+	const double zambianKwacha = 10.0546;		
+	
+	double BZD, HKD, USD, ZMW;
+
+	//This sets the currency format (0.00).
+	cout << setprecision(2) << fixed; 
+	cout << "Enter the dollar amount you want converted: $";
+	cin >> USD;
+
+	//Exchange rate calculations for each currency.
+	BZD = USD * belizeanDollar;
+	HKD = USD * hongkongDollar;
+	ZMW = USD * zambianKwacha;
+
+	//Displays the solutions for the dollar amount entered in the calculations. 
+	cout << "\nConversion rates for the following currencies are: \n";
+	cout << "$" << USD << "(USD) = $" << BZD << " Belize Dollars \n";
+	cout << "$" << USD << "(USD) = $" << HKD << " Hong Kong Dollars \n";
+	cout << "$" << USD << "(USD) = $" << ZMW << " Zambian Kwacha(Dollars) \n";
+
+	system("pause");
+	return 0;
+}

@@ -1,0 +1,235 @@
+//Author: Will Irvin
+//Student ID: 00061459
+//Computer Science II (CS318)
+//Mondays 2:30-5:20
+//Date: 08/28/2016
+//
+//Homework: Warmup Assignments, Data Sets (1 thru 5).
+//This program will read-in integer values
+//Calculate the total sum of the values
+//Calculate the average of the values as well (to one decimal place).
+
+#include <iostream>
+#include <iomanip>
+#include <fstream>
+using namespace std;
+
+int main()
+{
+	int intValues;		//Integer values from the files.
+
+	double	counter = 0,	//Counts the numbers.
+		totSum = 0,	//Accumulator.
+		avg;		//This will hold the averages from the files.
+	
+	//These are the file stream objects.
+	ifstream inFile;
+	ofstream outFile;
+
+	//Opens the file named DataSet1.txt.
+	inFile.open("dataSet1.txt");
+
+	//Opens the file dataOutput.txt for writing
+	outFile.open("dataOutput.txt");
+
+	//Reads the numbers from the file.
+	cout << "******************************************************" << endl;
+	cout << "*         The Integer Values from dataSet1           *" << endl;
+	cout << "******************************************************\n" << endl;
+
+	while (inFile >> intValues)
+	{
+		//Increments the counter each time it reads an integer value.
+		counter++;
+		//Adds the integer value to the accumulator.
+		totSum += intValues;
+		cout << intValues << endl;	
+	}
+	
+	//Calculate the average of the integer values.
+	avg = totSum / counter;
+
+	//Displays the results from the file that was read.
+	cout << setprecision(1) << fixed;
+	cout << "\nThe Number of Integer Values from the file: " << setw(10) << counter <<  endl;
+	cout << "The Total Sum of Integer values from the file: " << setw(7) << totSum << endl;
+	cout << "The Average Integer Values from the file: " << setw(12) << avg << endl;
+
+	//Writes results to output file.
+	outFile << setprecision(1) << fixed;
+	outFile << "Author: Will Irvin" << endl;
+	outFile << "Student ID: 00061459" << endl;
+	outFile << "CS318: Mondays 2:30 - 5:20" << endl;
+	outFile << "Homework Week 1: Data Sets (1 thru 5)" << endl;
+	outFile << "\ndataSet1 File Output Results" << endl;
+	outFile << "The Number of Integer Values from the file: " << setw(10) << counter << endl;
+	outFile << "The Total Sum of Integer values from the file: " << setw(7) << totSum << endl;
+	outFile << "The Average Integer Values from the file: " << setw(12) << avg << endl;
+
+	//Close the file.
+	inFile.close();
+
+	////////////////////////////////////////////////////////////////////////////////////////////////
+    	////////////////////////////////////////////////////////////////////////////////////////////////
+	
+	inFile.open("dataSet2.txt");
+	totSum = 0;
+	counter = 0;
+
+	//Reads the numbers from the file.
+	cout << "\n\n******************************************************" << endl;
+	cout << "*         The Integer Values from dataSet2           *" << endl;
+	cout << "******************************************************\n" << endl;
+
+	while (inFile >> intValues)
+	{
+		//Increments the counter each time it reads an integer value.
+		counter++;
+		//Adds the integer value to the accumulator.
+		totSum += intValues;
+		cout << intValues << endl;
+	}
+
+	//Calculate the average of the integer values.
+	avg = totSum / counter;
+
+	//Displays the results from the file that was read.
+	cout << setprecision(1) << fixed;
+	cout << "\nThe Number of Integer Values from the file: " << setw(10) << counter << endl;
+	cout << "The Total Sum of Integer values from the file: " << setw(7) << totSum << endl;
+	cout << "The Average Integer Values from the file: " << setw(12) << avg << endl;
+
+	//Writes results to output file.
+	outFile << setprecision(1) << fixed;
+	outFile << "\ndataSet2 File Output Results" << endl;
+	outFile << "The Number of Integer Values from the file: " << setw(10) << counter << endl;
+	outFile << "The Total Sum of Integer values from the file: " << setw(7) << totSum << endl;
+	outFile << "The Average Integer Values from the file: " << setw(12) << avg << endl;
+
+	//Close the file.
+	inFile.close();
+
+	//////////////////////////////////////////////////////////////////////////////////////////////////
+	//////////////////////////////////////////////////////////////////////////////////////////////////
+
+	inFile.open("dataSet3.txt");
+	totSum = 0;
+	counter = 0;
+
+	//Reads the numbers from the file.
+	cout << "\n\n******************************************************" << endl;
+	cout << "*         The Integer Values from dataSet3           *" << endl;
+	cout << "******************************************************\n" << endl;
+
+	while (inFile >> intValues)
+	{
+		//Increments the counter each time it reads an integer value.
+		counter++;
+		//Adds the integer value to the accumulator.
+		totSum += intValues;
+		cout << intValues << endl;
+	}
+
+	//Calculate the average of the integer values.
+	avg = totSum / counter;
+
+	//Displays the results from the file that was read.
+	cout << setprecision(1) << fixed;
+	cout << "\nThe Number of Integer Values from the file: " << setw(10) << counter << endl;
+	cout << "The Total Sum of Integer values from the file: " << setw(7) << totSum << endl;
+	cout << "The Average Integer Values from the file: " << setw(12) << avg << endl;
+
+	//Writes results to output file.
+	outFile << setprecision(1) << fixed;
+	outFile << "\ndataSet3 File Output Results" << endl;
+	outFile << "The Number of Integer Values from the file: " << setw(10) << counter << endl;
+	outFile << "The Total Sum of Integer values from the file: " << setw(7) << totSum << endl;
+	outFile << "The Average Integer Values from the file: " << setw(12) << avg << endl;
+
+	//Close the file.
+	inFile.close();
+
+	//////////////////////////////////////////////////////////////////////////////////////////////////
+	//////////////////////////////////////////////////////////////////////////////////////////////////
+
+	inFile.open("dataSet4.txt");
+	totSum = 0;
+	counter = 0;
+
+	//Reads the numbers from the file.
+	cout << "\n\n******************************************************" << endl;
+	cout << "*         The Integer Values from dataSet4           *" << endl;
+	cout << "******************************************************\n" << endl;
+
+	while (inFile >> intValues)
+	{
+		//Increments the counter each time it reads an integer value.
+		counter++;
+		//Adds the integer value to the accumulator.
+		totSum += intValues;
+		cout << intValues << endl;
+	}
+
+	//Calculate the average of the integer values.
+	avg = totSum / counter;
+
+	//Displays the results from the file that was read.
+	cout << setprecision(1) << fixed;
+	cout << "\nThe Number of Integer Values from the file: " << setw(10) << counter << endl;
+	cout << "The Total Sum of Integer values from the file: " << setw(7) << totSum << endl;
+	cout << "The Average Integer Values from the file: " << setw(12) << avg << endl;
+
+	//Writes results to output file.
+	outFile << setprecision(1) << fixed;
+	outFile << "\ndataSet4 File Output Results" << endl;
+	outFile << "The Number of Integer Values from the file: " << setw(10) << counter << endl;
+	outFile << "The Total Sum of Integer values from the file: " << setw(7) << totSum << endl;
+	outFile << "The Average Integer Values from the file: " << setw(12) << avg << endl;
+
+	//Close the file.
+	inFile.close();
+
+	//////////////////////////////////////////////////////////////////////////////////////////////////
+	//////////////////////////////////////////////////////////////////////////////////////////////////
+
+	inFile.open("dataSet5.txt");
+	totSum = 0;
+	counter = 0;
+
+	//Reads the numbers from the file.
+	cout << "\n\n******************************************************" << endl;
+	cout << "*         The Integer Values from dataSet5           *" << endl;
+	cout << "******************************************************\n" << endl;
+
+	while (inFile >> intValues)
+	{
+		//Increments the counter each time it reads an integer value.
+		counter++;
+		//Adds the integer value to the accumulator.
+		totSum += intValues;
+		cout << intValues << endl;
+	}
+
+	//Calculate the average of the integer values.
+	avg = totSum / counter;
+
+	//Displays the results from the file that was read.
+	cout << setprecision(1) << fixed;
+	cout << "\nThe Number of Integer Values from the file: " << setw(10) << counter << endl;
+	cout << "The Total Sum of Integer values from the file: " << setw(7) << totSum << endl;
+	cout << "The Average Integer Values from the file: " << setw(12) << avg << endl;
+
+	//Writes results to output file.
+	outFile << setprecision(1) << fixed;
+	outFile << "\ndataSet5 File Output Results" << endl;
+	outFile << "The Number of Integer Values from the file: " << setw(10) << counter << endl;
+	outFile << "The Total Sum of Integer values from the file: " << setw(7) << totSum << endl;
+	outFile << "The Average Integer Values from the file: " << setw(12) << avg << endl;
+
+	//Close the file.
+	inFile.close();
+
+	system("pause");
+	return 0;
+
+}

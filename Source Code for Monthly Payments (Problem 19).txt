@@ -1,0 +1,61 @@
+//Author: Will Irvin
+//Student ID: 00061459
+//CS318: Mondays 2:30 - 5:20
+//Homework Week 1: Monthly Payments (Programming Challenges #19)
+//
+//This program will calculate a monthly payment plan, 
+//and will display a report for the amount of the loan.
+//The amount of the loan is $305,000.
+//The interest is 3.35%.
+//The loan is for 20 years ( 20yrs * 12 months = 240 months).
+
+#include <iostream>
+#include <iomanip>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+	int	numOfPayments;
+	double	loanAmt,
+		rate,
+		annRate,
+		monPayments,
+		amtPaidBack,
+		intPaid;
+	
+	cout << "Enter the dollar amount of the loan: ";
+	cin >> loanAmt;
+
+	cout << "Enter the annual interest rate: ";
+	cin >> annRate;
+
+	cout << "Enter the number of payments: ";
+	cin >> numOfPayments;
+
+	//Calculations
+	rate = (annRate / 12) / 100;	//rate = monthly interest rate, which is the annual interest rate divided by 12.
+
+	monPayments = ((rate * pow((1 + rate), numOfPayments)) / (pow((1 + rate), numOfPayments) - 1))  * loanAmt;
+
+	amtPaidBack = monPayments * numOfPayments;
+
+	intPaid = amtPaidBack - loanAmt;
+
+	rate *= 100;
+
+	cout << "\n***********************************\n"
+	     << "      Monthly Loan Payments"
+	     << "\n***********************************\n";
+
+	cout << setprecision(2) << fixed;
+	cout << "Loan Amount:\t\t$" << setw(10) << loanAmt << endl;
+	cout << "Monthly Interest Rate:\t" << setw(10) << rate << "%" << endl;
+	cout << "Number of Payments:\t" << setw(11) << numOfPayments << endl;
+	cout << "Monthly Payments:\t$" << setw(10) << monPayments << endl;
+	cout << "Amount Paid Back:\t$" << setw(10) << amtPaidBack << endl;
+	cout << "Interest Paid:\t\t$" << setw(10) << intPaid << endl;
+
+	system("pause");
+	return 0;
+}

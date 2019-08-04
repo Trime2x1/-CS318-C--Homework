@@ -1,0 +1,110 @@
+//Author: Will Irvin
+//Student ID: 00061459
+//Computer Science II (CS318)
+//Mondays 2:30-5:20
+//Date: 08/28/2016
+//
+//Homework Problem: Chapter 4 / Programming Challenges #23
+//This program will create a geometry calculator and will give the user a choice of four options. 
+//The calulator will find the area of circle, rectangle, and triangle. 
+//The program will also include input validation so that if the user inputs an incorrect value, 
+//a error message will appear.
+
+#include <iostream>
+#include <iomanip>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+	//To hold a menu choice
+	int choice;  
+
+	//Constants for menu choices
+	const int  Circle = 1,
+		   Rectangle = 2,
+		   Triangle = 3,
+		   Quit = 4;
+
+	double	area,
+		radius,
+		length,
+		width,
+		base,
+		height;
+
+	const double	  Pi = 3.14159;
+
+	//display menu for the user.
+	cout << "Geometry Calculator\n"
+	     << "\n\t1. Calculate the Area of a Circle \n"
+	     << "\t2. Calculate the Area of a Rectangle\n"
+	     << "\t3. Calculate the Area of a Triangle\n"
+             << "\t4. Quit\n"
+	     << "\tEnter your choice (1-4): ";
+	cin >> choice;
+
+	//Switch statement
+	cout << setprecision(2) << fixed;
+	switch (choice)
+	{
+		case Circle: 
+			cout << "\nEnter a number for the radius of the circle: ";
+			cin >> radius;
+			if (radius < 0)
+			{
+			   cout << "The radius cannot be a negative number!\n\n"
+				<< "Enter a positive number for the radius: \n";
+			   cin >> radius;
+			}
+			area = Pi * pow(radius, 2.0);
+			cout << "\nThe Circle's Area = " << area << endl;
+			break;
+
+		case Rectangle:
+			cout << "\nEnter a number for the length of the rectangle: ";
+			cin >> length;
+			if (length < 0)
+			{
+			   cout << "The length cannot be a negative number!\n\n"
+				<< "Please enter a positive number for the length: ";
+			   cin >> length;
+			}
+			cout << "Enter a number for the width of the rectangle: ";
+			cin >> width;
+			if (width < 0)
+			{
+			   cout << "The width cannot be a negative number!\n\n"
+				<< "Please enter a positive number for the width: ";
+			   cin >> length;
+			}
+			area = length * width;
+			cout << "\nThe Rectangle's Area = " << area << endl;
+			break;
+		
+		case Triangle:
+			cout << "\nEnter a number for the base of the triangle: ";
+			cin >> base;
+			if (base < 0)
+			{
+			   cout << "The base cannot be a negative number!\n\n"
+				<< "Please enter a positive number for the base: ";
+			   cin >> base;
+			}
+			cout << "Enter a number for the height of the triangle: ";
+			cin >> height;
+			if (height < 0)
+			{
+			   cout << "The height cannot be a negative number!\n\n"
+				<< "Please enter a positive number for the height: ";
+			   cin >> height;
+			}
+			area = base * height * .5;
+			cout << "\nThe Triangle's Area = " << area << endl;
+			break;
+	}
+
+	system("pause");
+	return 0;
+}
