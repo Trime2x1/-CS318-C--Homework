@@ -1,0 +1,62 @@
+// Author: Will Irvin
+// Date: 03-17-2017
+// CS318: Mondays 6:00 - 8:50 PM
+// Homework Week 10: String Length Program
+
+
+#include <iostream>
+#include <fstream>
+#include <string>
+using namespace std;
+
+ofstream fout("StringProgram.out");
+
+//Function ProtoType
+int strLength (char *);
+
+
+int main()
+{
+	const int length = 75;
+	char userInput [length];
+
+
+	fout << "Author: Will Irvin" << endl;
+	fout << "Student ID: 00061459" << endl;
+	fout << "Date: 03-15-2017" << endl;
+	fout << "CS318: Mondays 6:00 - 8:50 PM" << endl;
+	fout << "Homework Week 10: C-String & Class String Programs\n" << endl;
+
+	fout << "\nQuestion 1: String Length" << endl;
+	fout << "*************************" << endl;
+
+
+	//Ask the User to input a string
+	cout << "Enter a string(sentence): ";
+	cin.getline (userInput, length, '\n');
+
+	cout << "\nThe length of \"" << userInput << "\"" << " is " 
+	     << strLength(userInput) << " char" << endl << endl;
+
+	fout << "The length of \"" << userInput << "\"" << " is " 
+	     << strLength(userInput) << " char" << endl << endl;
+
+
+	fout.close();
+
+	system ("pause");
+	return 0;
+
+}
+
+
+/////////////////////////////////////////////////////////////////////
+//               This is the stringLength Function		   //
+/////////////////////////////////////////////////////////////////////
+int strLength (char *stringLen)
+{
+	return strlen(stringLen);
+}
+
+
+

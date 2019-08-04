@@ -1,0 +1,70 @@
+//Author: Will Irvin
+//Date: 03-15-2017
+//CS318: Mondays 6:00 - 8:50 PM
+//Homework Week 10: C-String & Class String Programs.
+
+//This program was built using the following resources
+//www.cplusplus.com, www.stackoverflow, and the textbook
+//(Starting out with C++) used in class.
+
+#include <iostream>
+#include <cstring>
+#include <fstream>
+using namespace std;
+
+ofstream fout("reverseOutput.out");
+
+//Function Prototype
+void reverseString(char *orgString);
+
+int main()
+{
+	const int length = 75;
+	char	inString[length];
+
+	//User Input
+	cout << "Enter a String to be reversed: ";
+	cin.getline(inString, length);
+
+	fout << "Author: Will Irvin" << endl;
+	fout << "Student ID: 00061459" << endl;
+	fout << "Date: 03-15-2017" << endl;
+	fout << "CS318: Mondays 6:00 - 8:50 PM" << endl;
+	fout << "Homework Week 10: C-String & Class String Programs\n" << endl;
+
+	fout << "Question 2: Print String Backwards" << endl;
+	fout << "**********************************\n" << endl;
+	fout << "The String you entered...\n" << endl;
+	fout << "\"" << inString << "\"" << endl << endl;
+	fout << "is shown below in reverse order...\n" << endl;
+
+	//Function Call
+	reverseString(inString);
+
+	fout.close();
+
+	system("pause");
+	return 0;
+
+}
+
+
+	///////////////////////////////////////////////////////////////////////////
+	//                     This is the reverse function                      //
+	///////////////////////////////////////////////////////////////////////////
+	void reverseString(char* orgStr)
+	{
+		char *opposite = orgStr;	//Creates a temporoary string pointer.
+		
+		while (*opposite != '\0')	//This moves through the string until the end.	
+			opposite++;
+
+		while (opposite != orgStr)	//This will display the characters of the string from the end.
+		{
+			opposite--;
+			cout << *opposite;
+			fout << *opposite;
+		}
+		cout << endl << endl;
+		fout << endl << endl;
+	}
