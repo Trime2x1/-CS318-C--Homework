@@ -22,7 +22,7 @@ int main()
 
 
 	fout << "Author: Will Irvin" << endl;
-	fout << "Student ID: 00061459" << endl;
+	fout << "Student ID: XXXXXXXXXX" << endl;
 	fout << "Date: 03-15-2017" << endl;
 	fout << "CS318: Mondays 6:00 - 8:50 PM" << endl;
 	fout << "Homework Week 10: C-String & Class String Programs\n" << endl;
