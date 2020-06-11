@@ -1,5 +1,5 @@
 //Author: Will Irvin
-//Student ID: 00061459
+//Student ID: XXXXXXXXXX
 //CS318: Mondays 2:30 - 5:20 
 //Homework Week 1: Currency (Programming Challenges #13)
 //
