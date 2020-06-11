@@ -48,7 +48,7 @@ int main()
 
 	//Display info for the output file functionResults.
 	outFile << "Author: Will Irvin" << endl;
-	outFile << "Student ID: 00061459" << endl;
+	outFile << "Student ID: XXXXXXXXXX" << endl;
 	outFile << "CS318: Mondays 2:30 - 5:20" << endl;
 	outFile << "Homework Week 3: 2D Array Stuff Part Deux\n" << endl;
 
