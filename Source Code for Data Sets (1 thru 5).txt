@@ -1,5 +1,5 @@
 //Author: Will Irvin
-//Student ID: 00061459
+//Student ID: XXXXXXXXXX
 //Computer Science II (CS318)
 //Mondays 2:30-5:20
 //Date: 08/28/2016
@@ -58,7 +58,7 @@ int main()
 	//Writes results to output file.
 	outFile << setprecision(1) << fixed;
 	outFile << "Author: Will Irvin" << endl;
-	outFile << "Student ID: 00061459" << endl;
+	outFile << "Student ID: XXXXXXXXXX" << endl;
 	outFile << "CS318: Mondays 2:30 - 5:20" << endl;
 	outFile << "Homework Week 1: Data Sets (1 thru 5)" << endl;
 	outFile << "\ndataSet1 File Output Results" << endl;
